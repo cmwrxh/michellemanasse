@@ -1,16 +1,18 @@
 <!DOCTYPE HTML>
-<html>
+<html lang="en">
 	<head>
 		<title>Michelle Manasse LLC | Mosaic Architecture</title>
 		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<style>
 			/* Mosaic Glass Styling */
-			.mosaic-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 15px; padding: 20px; }
-			.mosaic-tile { background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.1); backdrop-filter: blur(8px); padding: 2em; transition: 0.4s; }
-			.mosaic-tile:hover { background: rgba(255, 255, 255, 0.1); border-color: rgba(255, 255, 255, 0.3); }
 			#intro { background: linear-gradient(135deg, #0a0a0a, #1a1a1a); }
+			#strategy { background: #12181b; color: #ffffff; }
+			.mosaic-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 15px; padding: 20px 0; }
+			.mosaic-tile { background: rgba(255, 255, 255, 0.06); border: 1px solid rgba(255, 255, 255, 0.15); padding: 2em; transition: 0.4s; text-align: left; }
+			.mosaic-tile:hover { background: rgba(255, 255, 255, 0.12); border-color: rgba(255, 255, 255, 0.35); }
+			.mosaic-tile h3 { font-weight: 900; font-size: 1.2em; margin-bottom: 0.5em; }
 		</style>
 	</head>
 	<body class="is-preload">
@@ -53,19 +55,27 @@
 				<header><h2>Our Ecosystem</h2></header>
 				<div class="gallery">
 					<article class="from-left">
-						<a href="#" class="image fit"><img src="images/thumbs/01.jpg" title="Brilliant Unicorn Ltd" alt="Engineering" /></a>
+						<a href="https://brilliantunicorn.com" class="image fit" target="_blank" rel="noopener">
+							<img src="images/thumbs/01.jpg" title="Brilliant Unicorn Ltd" alt="Brilliant Unicorn Ltd - Engineering" />
+						</a>
 					</article>
 					<article class="from-right">
-						<a href="#" class="image fit"><img src="images/thumbs/02.jpg" title="Kudu Biotech Ltd" alt="Conservation" /></a>
+						<a href="#contact" class="image fit">
+							<img src="images/thumbs/02.jpg" title="Kudu Biotech Ltd" alt="Kudu Biotech Ltd - Conservation" />
+						</a>
 					</article>
 				</div>
 			</div>
 		</section>
 
+		<!-- Contact -->
 		<section id="contact" class="main style3 secondary">
 			<div class="content">
 				<h2>Inquiries.</h2>
 				<p>Michelle Manasse LLC | California, USA</p>
+				<ul class="actions special">
+					<li><a href="mailto:hello@michellemanasse.com" class="button">Email us</a></li>
+				</ul>
 			</div>
 		</section>
 
@@ -73,8 +83,19 @@
 			<ul class="menu"><li>&copy; 2026 Michelle Manasse LLC</li><li>Based in California, USA</li></ul>
 		</footer>
 
-		<!-- Scripts -->
+		<!-- Scripts (Big Picture needs all of these, in this order) -->
 		<script src="assets/js/jquery.min.js"></script>
+		<script src="assets/js/jquery.scrolly.min.js"></script>
+		<script src="assets/js/jquery.scrollex.min.js"></script>
+		<script src="assets/js/browser.min.js"></script>
+		<script src="assets/js/breakpoints.min.js"></script>
+		<script src="assets/js/util.js"></script>
 		<script src="assets/js/main.js"></script>
+		<!-- Safety net: never leave the loading overlay stuck -->
+		<script>
+			window.addEventListener('load', function () {
+				setTimeout(function () { document.body.classList.remove('is-preload'); }, 100);
+			});
+		</script>
 	</body>
 </html>
