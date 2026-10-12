@@ -5,6 +5,18 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<meta name="description" content="Marketing consulting for small and growing businesses: strategy, campaigns, content and measurement." />
+		<link rel="icon" type="image/svg+xml" href="favicon.svg" />
+		<link rel="apple-touch-icon" href="apple-touch-icon.png" />
+		<meta property="og:type" content="website" />
+		<meta property="og:site_name" content="Michelle Manasse LLC" />
+		<meta property="og:title" content="Michelle Manasse LLC | Marketing Consulting" />
+		<meta property="og:description" content="Marketing consulting for small and growing businesses: strategy, campaigns, content and measurement." />
+		<meta property="og:url" content="https://michellemanasse.com/" />
+		<meta property="og:image" content="https://michellemanasse.com/og-image.png" />
+		<meta name="twitter:card" content="summary_large_image" />
+		<meta name="twitter:image" content="https://michellemanasse.com/og-image.png" />
+		<!-- Analytics: Plausible (cookie-free). Needs a site added at plausible.io for michellemanasse.com -->
+		<script defer data-domain="michellemanasse.com" src="https://plausible.io/js/script.js"></script>
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<style>
 			/* Brand palette: charcoal #1C1C1E, gold #C9A24B, off-white #F5F3EE */
@@ -17,8 +29,8 @@
 			.button:active { background-color: #B38D3E; }
 			#intro { background: linear-gradient(135deg, #1C1C1E, #2B2B2E); }
 			#intro h2 { color: #F5F3EE; }
-			#services { background: #1C1C1E; color: #F5F3EE; }
-			#services h2 { color: #C9A24B; }
+			#services, #pricing { background: #1C1C1E; color: #F5F3EE; }
+			#services h2, #pricing h2 { color: #C9A24B; }
 			.main.style3.primary { background: #F5F3EE; }
 			.main.style3.secondary { background: #ECE8DF; }
 			#footer { background: #1C1C1E; }
@@ -31,9 +43,18 @@
 			.result-card .stat-label { display: block; text-transform: uppercase; letter-spacing: 0.15em; font-size: 0.8em; margin: 0.5em 0 1.5em 0; }
 			.result-card h3 { font-weight: 900; margin-bottom: 0.25em; }
 			.result-note { font-size: 0.75em; opacity: 0.65; }
+			.price { color: #C9A24B; font-weight: 900; margin-top: 1em; }
+			.about { display: flex; gap: 2em; align-items: center; text-align: left; }
+			.about .avatar { flex: 0 0 9em; width: 9em; height: 9em; border-radius: 50%; background: #1C1C1E; color: #C9A24B; display: flex; align-items: center; justify-content: center; font-size: 3em; font-weight: 900; overflow: hidden; }
+			.about .avatar img { width: 100%; height: 100%; object-fit: cover; }
+			.contact-email { margin-top: 1em; }
+			.contact-email a { color: #1C1C1E; font-weight: 900; }
+			@media screen and (max-width: 736px) { .about { flex-direction: column; text-align: center; } }
 			.steps { text-align: left; max-width: 36em; margin: 0 auto 2em auto; }
 			.steps li { margin-bottom: 0.75em; }
 		</style>
+		<!-- Whop tracking (attributes visits to Whop purchases) -->
+		<script>!function(w,d,s,u,n,a,b){if(w[n])return;a=w[n]={q:[],t:+new Date,s:[],o:u,track:function(){a.q.push([+new Date].concat([].slice.call(arguments)))},setScope:function(){a.s=[].slice.call(arguments).filter(function(x){return typeof x==="string"});a.q.push([+new Date,"setScope"].concat(a.s))},scope:function(){var c=[].slice.call(arguments);return{track:function(){a.q.push([+new Date].concat([].slice.call(arguments)).concat([{__scope:c}]))}}}};b=d.createElement(s);b.async=1;b.src=u+"/s.js";d.getElementsByTagName(s)[0].parentNode.insertBefore(b,d.getElementsByTagName(s)[0])}(window,document,"script","https://t.whop.tw","whop");whop.setScope("biz_rFigz81JkaV8zk");whop.track("page");</script>
 	</head>
 	<body class="is-preload">
 
@@ -44,7 +65,8 @@
 					<li><a href="#intro">Home</a></li>
 					<li><a href="#services">Services</a></li>
 					<li><a href="#results">Results</a></li>
-					<li><a href="#process">Process</a></li>
+					<li><a href="#pricing">Pricing</a></li>
+					<li><a href="#about">About</a></li>
 					<li><a href="#contact">Contact</a></li>
 				</ul>
 			</nav>
@@ -94,10 +116,37 @@
 				<header><h2>How It Works</h2></header>
 				<ol class="default steps">
 					<li><strong>Discover.</strong> A short call to understand your business, customers and goals.</li>
-					<li><strong>Plan.</strong> A clear proposal with scope, timeline and fixed pricing.</li>
+					<li><strong>Plan.</strong> A clear proposal with scope, timeline and fixed pricing. Once you approve, you pay securely through Whop.</li>
 					<li><strong>Launch.</strong> We build and run the campaign, with updates along the way.</li>
 					<li><strong>Review.</strong> Results report and recommended next steps.</li>
 				</ol>
+			</div>
+		</section>
+
+		<!-- Pricing -->
+		<section id="pricing" class="main style3">
+			<div class="content">
+				<header><h2>Packages</h2></header>
+				<div class="mosaic-grid">
+					<div class="mosaic-tile"><h3>Strategy Session</h3><p>Positioning review, audience and channel recommendations, and a clear 90-day action plan you can run yourself.</p><p class="price"><a href="https://whop.com/michellemanasse/marketing-strategy-session-1b/" class="button" target="_blank" rel="noopener">Book &amp; pay on Whop</a></p></div>
+					<div class="mosaic-tile"><h3>Campaign</h3><p>Everything in the Strategy Session, plus we build and run one campaign, create the content, set up tracking and report on results.</p><p class="price">Custom quote</p></div>
+					<div class="mosaic-tile"><h3>Ongoing Partner</h3><p>Monthly campaign management, content, reporting and a strategy call, so marketing keeps working while you run the business.</p><p class="price">Custom quote</p></div>
+				</div>
+				<p>Every project is scoped to your goals and budget. Book a free intro call and you will get a fixed quote. Payment is handled securely through Whop.</p>
+			</div>
+		</section>
+
+		<!-- About -->
+		<section id="about" class="main style3 primary">
+			<div class="content">
+				<header><h2>About</h2></header>
+				<div class="about">
+					<div class="avatar">M<!-- To use a photo: replace M with <img src="images/about.jpg" alt="Your name"> --></div>
+					<div>
+						<p><strong>Michelle Manasse LLC</strong> is a marketing consultancy that helps small and growing businesses get more customers. You work directly with the consultant on your project, with no layers of account managers.</p>
+						<p>The approach is simple: understand the business, pick the few channels that matter, run focused campaigns, and measure what happens.</p>
+					</div>
+				</div>
 			</div>
 		</section>
 
@@ -109,11 +158,13 @@
 				<ul class="actions special">
 					<li><a href="mailto:michellemanasse1@gmail.com" class="button">Email us</a></li>
 				</ul>
+				<p class="contact-email">Ready to start? <a href="https://whop.com/michellemanasse/marketing-strategy-session-1b/" target="_blank" rel="noopener">Book a Strategy Session on Whop</a>.<br />Or write to <a href="mailto:michellemanasse1@gmail.com">michellemanasse1@gmail.com</a></p>
+				<p class="result-note">Michelle Manasse LLC is a marketing consultancy. We only use your details to reply to your inquiry. See our <a href="privacy.html" style="color:inherit">Privacy Policy</a>.</p>
 			</div>
 		</section>
 
 		<footer id="footer">
-			<ul class="menu"><li>&copy; 2026 Michelle Manasse LLC</li><li>Marketing Consulting</li></ul>
+			<ul class="menu"><li>&copy; 2026 Michelle Manasse LLC</li><li>Marketing Consulting</li><li><a href="privacy.html">Privacy Policy</a></li><li><a href="mailto:michellemanasse1@gmail.com">michellemanasse1@gmail.com</a></li></ul>
 		</footer>
 
 		<script src="assets/js/jquery.min.js"></script>
