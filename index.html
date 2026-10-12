@@ -7,12 +7,25 @@
 		<meta name="description" content="Marketing consulting for small and growing businesses: strategy, campaigns, content and measurement." />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<style>
-			#intro { background: linear-gradient(135deg, #0a0a0a, #1a1a1a); }
-			#services { background: #12181b; color: #ffffff; }
+			/* Brand palette: charcoal #1C1C1E, gold #C9A24B, off-white #F5F3EE */
+			body { background: #F5F3EE; }
+			body, input, textarea, select { color: #1C1C1E; }
+			a { color: #C9A24B; }
+			#header { background: rgba(245, 243, 238, 0.95); }
+			.button { background-color: #C9A24B; color: #1C1C1E; font-weight: 900; }
+			.button:hover { background-color: #D6B366; }
+			.button:active { background-color: #B38D3E; }
+			#intro { background: linear-gradient(135deg, #1C1C1E, #2B2B2E); }
+			#intro h2 { color: #F5F3EE; }
+			#services { background: #1C1C1E; color: #F5F3EE; }
+			#services h2 { color: #C9A24B; }
+			.main.style3.primary { background: #F5F3EE; }
+			.main.style3.secondary { background: #ECE8DF; }
+			#footer { background: #1C1C1E; }
 			.mosaic-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 15px; padding: 20px 0; }
-			.mosaic-tile { background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.15); padding: 2em; transition: 0.4s; text-align: left; }
-			.mosaic-tile:hover { background: rgba(255,255,255,0.12); border-color: rgba(255,255,255,0.35); }
-			.mosaic-tile h3 { font-weight: 900; font-size: 1.2em; margin-bottom: 0.5em; }
+			.mosaic-tile { background: rgba(255,255,255,0.04); border: 1px solid rgba(201,162,75,0.35); padding: 2em; transition: 0.4s; text-align: left; }
+			.mosaic-tile:hover { background: rgba(201,162,75,0.10); border-color: #C9A24B; }
+			.mosaic-tile h3 { font-weight: 900; font-size: 1.2em; margin-bottom: 0.5em; color: #C9A24B; }
 			.steps { text-align: left; max-width: 36em; margin: 0 auto 2em auto; }
 			.steps li { margin-bottom: 0.75em; }
 		</style>
@@ -86,6 +99,7 @@
 		<script src="assets/js/jquery.min.js"></script>
 		<script src="assets/js/jquery.scrolly.min.js"></script>
 		<script src="assets/js/jquery.scrollex.min.js"></script>
+		<script src="assets/js/jquery.poptrox.min.js"></script>
 		<script src="assets/js/browser.min.js"></script>
 		<script src="assets/js/breakpoints.min.js"></script>
 		<script src="assets/js/util.js"></script>
